@@ -1,0 +1,11 @@
+.deletBotton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 48px;
+    color: bisque;
+    height: 40px;
+}
+.titleLink::before {
+    position: relative !important;
+}

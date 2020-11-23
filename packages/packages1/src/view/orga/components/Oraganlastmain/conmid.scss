@@ -1,0 +1,36 @@
+.conmid {
+    // margin: 20vh 20vw;
+    // border: 1px solid #777;
+    padding: 0.1rem;
+    .top-line {
+        background-color:#f0f0f0; 
+        height:1px; 
+        border:none;
+    }
+    .add-user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1rem;
+        padding: 0 0.2rem;
+    }
+    .user-table {
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0.2rem auto 1rem;
+            text-align: center;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #f0f0f0;
+            padding: 0.05rem 0.1rem;
+        }
+        th {
+            background-color: beige;
+        }
+        
+    }
+}
