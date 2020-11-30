@@ -53,8 +53,6 @@ class AdduserForm extends React.Component{
                     account: userstore.userInfo.account,
                     usertype: userstore.userInfo.usertype,
                     fororgan: userstore.userInfo.fororgan,
-
-                            
                 })
             }).catch((err)=> {
                 console.log(err)

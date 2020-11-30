@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 import './assets/rem.js'
+import './language/i18n'
 ReactDOM.render(
   // <React.StrictMode>
     <App />,

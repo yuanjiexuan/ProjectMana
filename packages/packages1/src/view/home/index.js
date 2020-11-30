@@ -1,42 +1,70 @@
 import React,{Fragment} from 'react';
-import { Layout  } from 'antd';
 import "./index.scss";
-import Headerself from "../../components/header";
-const { Header, Content } = Layout;
+import logo from "../../assets/images/logo.jpg";
+import { renderRoutes } from "react-router-config";
+import {Portal} from 'darth-portal-ui';
+class Index extends React.Component {
+    constructor(props){
+        super(props);
 
-class Organ extends React.Component {
+        this.state = {
+            headerRouter:[
+                {
+                    to:'/index/home',
+                    title: '首页',
+                    key: 'home'
+                },
+                {
+                    to:'/index/project',
+                    title:'项目',
+                    key: 'project'
+                },
+                {
+                    to:'/index/iteration',
+                    title:'迭代',
+                    key: 'dd'
+                },
+                {
+                    to:'/1',
+                    title:'事项',
+                    key: 'sx'
+                },
+                {
+                    to:'/2',
+                    title:'日志',
+                    key: 'rz'
+                },
+                {
+                    to:'/index/organ',
+                    title:'系统管理',
+                    key: 'organ'
+                }
+            ]
+        }
+    }
     handleClick = e => {
         console.log('click ', e);
     };
 
     render() {
+        const route = this.props.route
         return (
             <Fragment>
-            <Layout className="lnit">
-                <div className = "mianHeader">
-                    <Header>
-                        <Headerself></Headerself>
-                    </Header>
-                </div>
-                <Content
-                    className="site-layout-background"
-                    style={{
-                        padding: 0,
-                        margin: 24,
-                        minHeight: 280,
-                    }}
+                <div>
+                    <Portal 
+                        routers={this.state.headerRouter}
+                        {...this.props}
+                        FooterComponent={'footer'}
+                        redirect={'/'}
+                        logo={logo}
                     >
-                    <div className="main-left">
                         
-                    </div>
-                    <div className="main-right">
-                        
-                    </div>
-                </Content>
-            </Layout>
-        </Fragment>
+                        {renderRoutes(route.routes)}
+                    </Portal>
+                </div>
+            </Fragment>
         );
     }
 }
 
-export default Organ;
+export default Index;

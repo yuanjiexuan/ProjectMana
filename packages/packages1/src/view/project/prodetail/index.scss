@@ -1,0 +1,49 @@
+.prodetail {
+    
+    .ant-layout-sider {
+        background-color: #ffffff;
+        .pro-title {
+            height: 40px;
+            line-height: 40px;
+            // border-bottom: 3px solid #999999;
+            padding: 4px 0;
+            margin-bottom: 4px;
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .prodecontent{
+        padding: 10px;
+        background-color: #ffffff;
+        .pro-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .pro-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15vw;
+                height: 80px;
+                border: solid 1px #aaa;
+                .pro-icon {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        .pro-state {
+            margin-top: 20px;
+        }
+        .search-add{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+    }
+    
+    
+}

@@ -1,28 +1,29 @@
 import React,{Fragment} from 'react';
+import {observer, inject} from "mobx-react";
 import { Layout  } from 'antd';
-import "./index.scss";
-import Aside from "./components/Aside";
-import ContainerMain from "../../components/ContentMain/index";
-import Headerself from "../../components/header";
+import ContainerMain from "../../components/organ/ContentMain/index";
+import Aside from "../../components/organ/asideMenu/Aside";
 const { Header, Sider,Content } = Layout;
+const Home = (props) => {
 
-class Organ extends React.Component {
-    handleClick = e => {
-        console.log('click ', e);
-    };
-    componentDidMount(){
-        console.log(this.props)
-    }
-    render() {
-        return (
-            <Fragment>
-            <Layout>
-                <div className = "mianHeader">
-                    <Header>
-                        <Headerself></Headerself>
-                    </Header>
-                </div>
-                <Layout className="mainContain">
+    
+    
+
+    return(
+        // <Fragment>
+        // <DarthOrgContent
+        //     {...props}
+        //     selectMenu={onSelectMenu}
+        // >
+        // </DarthOrgContent>
+        // {/* <DarthUser
+        //         {...props}
+        //         homeRouter={homeRouter}
+        //         selectMenu={onSelectMenu}
+        // /> */}
+        // </Fragment>
+        <Fragment>       
+            <Layout className="mainContain">
                 <Sider width={200} className="site-layout-background">
                     <Aside></Aside>
                 </Sider>
@@ -36,11 +37,11 @@ class Organ extends React.Component {
                     >
                         <ContainerMain></ContainerMain>
                 </Content>
-                </Layout>
             </Layout>
         </Fragment>
-        );
-    }
+    )
 }
 
-export default Organ;
+
+
+export default inject('darthOrgStore')(observer(Home))

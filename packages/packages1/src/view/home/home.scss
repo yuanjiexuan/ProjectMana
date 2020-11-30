@@ -1,0 +1,11 @@
+.darth-home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    .darth-home-box {
+        height: 90%;
+        width: 40vw;
+        border: solid 1px #999999;
+    }
+}

@@ -1,0 +1,31 @@
+
+import i18n from "i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import Backend from 'i18next-http-backend';
+import {initReactI18next} from 'react-i18next';
+import zhCnTrans from "./cn/translation.json";
+import enUsTrans from "./en/translation.json";
+import {portal_cn, portal_en} from "darth-portal-ui/publish/language";
+i18n.use(Backend).use(LanguageDetector) //嗅探当前浏览器语言
+    .use(initReactI18next) //init i18next
+    .init({
+        //引入资源文件
+        resources: {
+            zh: {
+                translation: {...zhCnTrans, ...portal_cn},
+            },
+            en: {
+                translation: {...enUsTrans,...portal_en},
+            },
+
+        },
+        //选择默认语言，选择内容为上述配置中的key，即en/zh
+        fallbackLng: "zh",
+        lng: 'zh',
+        debug: false,
+        interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+        },
+    })
+
+export default i18n;

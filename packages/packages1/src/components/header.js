@@ -22,6 +22,16 @@ class Headerself extends React.Component{
                                 系统管理
                             </Link>
                         </div>
+                        <div onClick={()=>this.changeRouter("/index/user")}>
+                            <Link to="/project" className="jump">
+                                项目
+                            </Link>
+                        </div>
+                        <div onClick={()=>this.changeRouter("/index/user")}>
+                            <Link to="/index/user" className="jump">
+                                迭代
+                            </Link>
+                        </div>
                     </div>
                     <div className="search">
                         <input type="text"/>

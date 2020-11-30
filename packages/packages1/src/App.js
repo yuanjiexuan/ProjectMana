@@ -1,28 +1,30 @@
 
 import './App.css';
 import React from 'react';
-// import ReactDOM from 'react-dom';
-import {Switch, Route, HashRouter} from "react-router-dom";
-import Home from "./view/login/login";
-import Organ from "./view/orga/index";
-import Lnit from "./view/home/index"
-// 私有组件方法
-import PrivateRouter from './components/privateRouter/index';
+import { BrowserRouter} from "react-router-dom";
+import {Provider} from 'mobx-react'
+import routes from  './routes';
+import{orgStores} from "darth-orga-ui";
+import { renderRoutes } from "react-router-config";
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
+    const allStore = { ...orgStores}
     return (
-        <HashRouter>
-          <Switch>
-            <Route component={Home} exact path="/" />
-            {/* <Route component={Organ} path="/organ" /> */}
-            <PrivateRouter component={Organ} path="/index"></PrivateRouter>
-            <PrivateRouter component={Lnit} path="/lnit"></PrivateRouter>
-          </Switch>
-        </HashRouter>
+      <Provider {...allStore}>
+      <BrowserRouter >
+          {/* <Switch> */}
+          {renderRoutes(routes)}
+            {/* <Route component={Login} exact path="/" />
+            <PrivateRouter component={Home} path="/index"></PrivateRouter>
+            <PrivateRouter component={Project} path="/project"></PrivateRouter> */}
+          {/* </Switch> */}
+        </BrowserRouter>
+                
+      </Provider>
     );
   }
 }

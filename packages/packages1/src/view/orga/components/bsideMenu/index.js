@@ -1,11 +1,10 @@
 import React,{Fragment} from 'react';
 import { Menu  } from 'antd';
-// import { Link } from "react-router-dom";
 import { observer } from "mobx-react";
 //路由
 import "./index.scss"
 import store from "../../store/store"
-import Logic from "../Organmidmain/addlogic"
+import Logic from "../Treemenu/addlogic"
 const { SubMenu } = Menu;
 @observer class BsideMenu extends React.Component {
     constructor(props){

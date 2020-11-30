@@ -45,9 +45,6 @@ const columns = [
     componentDidMount(){
         UserStore.getUserList()
     }
-    // deluser(key){
-    //     UserStore.delUserList()
-    // }
     render(){
             return (
                 <Table columns={columns} dataSource={userstore.userlist} />
