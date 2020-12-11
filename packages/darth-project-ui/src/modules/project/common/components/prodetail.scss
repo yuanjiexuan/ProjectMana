@@ -1,0 +1,109 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+.dath-prodetail {
+    .ant-layout-sider {
+        background-color: #ffffff;
+        .project-aside {
+            background: #f5f5f5;
+            .project-title {
+                height: 40px;
+                display: flex;
+                line-height: 40px;
+                width: 100%;
+                align-items: center;
+                padding: 0 20px;
+                
+                span{
+                    width: 100px;
+                    height: 100%;
+                    overflow: hidden;
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+                
+            }
+            .title {
+                border-bottom: 1px solid #aaaa;
+            }
+            .setting {
+                border-top: 1px solid #aaaa;
+            }
+            .project-menu {
+                list-style-type:none;
+                height: 83vh;
+                .project-menu-submenu {
+                    height: 40px;
+                    display: flex;
+                    line-height: 40px;
+                    width: 100%;
+                    align-items: center;
+                    padding-left: 20px;
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+                .project-menu-select {
+                    background-color: #e6f7ff;
+                }
+            }
+            .hidden-menu {
+                display: none;
+            }
+        }
+        .project-notext {
+            display: none;
+        }
+    }
+    .project-icon {
+        width: 50px;
+    }
+    .prodetail-content{
+        padding: 10px;
+        background-color: #ffffff;
+        .pro-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .pro-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15vw;
+                height: 80px;
+                border: solid 1px #aaa;
+                .pro-icon {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        .pro-state {
+            margin-top: 20px;
+        }
+        .search-add{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+    }
+    
+    
+}
+.project-modal{
+    .ant-modal-body {
+        padding: 0 24px;
+        .project-name {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+        .project-selectName {
+            background-color: #e6f7ff;
+            
+        }
+    }
+}
